@@ -1,0 +1,41 @@
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: blue;
+    height: 150px;
+    display: flex;
+    text-align: center;
+    font-size: 72px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    font-size: 72px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+button {
+    width: fit-content;
+    margin: 10px;
+    font-size: 72px;
+}
+
+a {
+    text-decoration: none;
+}

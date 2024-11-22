@@ -1,0 +1,99 @@
+////////////////////Some event Handler i used to use/////////////////////
+// This is for handling all events and is repeated twice, once for keydowns and once for keyups
+// window.onkeydown = (event) => eventHandler(event, player, 'down');
+// window.onkeyup = (event) => eventHandler(event, player, 'up');
+
+// window.onkeydown = (event) => eventHandlerDown(event, player);
+// window.onkeyup = (event) => eventHandlerUp(event, player);
+
+
+// function eventHandler(event, playerInstance, upOrDown) {
+//     event.preventDefault()
+//     keyNum = event.keyCode;
+//     // console.log(keyNum);
+//     // console.log(upOrDown);
+
+//     if (upOrDown == 'down') {
+//         // switch (keyNum) {
+//         //     case 38: player.forwardUpdate = -1; break;
+//         //     case 40: player.forwardUpdate = 1; break;
+//         //     case 37: player.rotateRightUpdate = 1; break;
+//         //     case 39: player.rotateRightUpdate = -1; break
+//         // }
+//         if (keyNum == 38) player.forwardUpdate = -1;
+//         if (keyNum == 40) player.forwardUpdate = 1;
+//         if (keyNum == 37) player.rotateRightUpdate = 1;
+//         if (keyNum == 39) player.rotateRightUpdate = -1;
+
+
+//     } else {
+//         // switch (keyNum) {
+//         //     case 38:
+//         //     case 40: player.forwardUpdate = 0; break;
+//         //     case 37:
+//         //     case 39: player.rotateRightUpdate = 0; break;
+//         // }
+//         if (keyNum == 38) player.forwardUpdate = 0;
+//         if (keyNum == 40) player.forwardUpdate = 0;
+//         if (keyNum == 37) player.rotateRightUpdate = 0;
+//         if (keyNum == 39) player.rotateRightUpdate = 0;
+//     }
+
+// }
+
+
+
+
+// function eventHandlerDown(event, playerInstance) {
+//     event.preventDefault()
+
+//     keyNum = event.keyCode;
+//     if (keyNum == 38) player.forwardUpdate = -1;
+//     if (keyNum == 40) player.forwardUpdate = 1;
+//     if (keyNum == 37) player.rotateRightUpdate = 1;
+//     if (keyNum == 39) player.rotateRightUpdate = -1;
+// }
+
+// function eventHandlerUp(event, playerInstance) {
+//     event.preventDefault()
+
+//     keyNum = event.keyCode;
+//     if (keyNum == 38) player.forwardUpdate = 0;
+//     if (keyNum == 40) player.forwardUpdate = 0;
+//     if (keyNum == 37) player.rotateRightUpdate = 0;
+//     if (keyNum == 39) player.rotateRightUpdate = 0;
+// }
+
+
+
+
+
+
+
+Old updateHitbox function
+
+
+updateHitbox(x, y) {
+
+        // Hitbox
+
+        // The reason I do all of this and then basically copy it over is because then there are no issues with reading this.hitbox.something from within this.hitbox
+
+        this.hitboxLength = this.size * 2;
+
+        this.hitboxTop = (y) - (this.hitboxLength / 2);
+        // this.hitboxTop = (this.y);
+        this.hitboxBottom = (x + (this.hitboxLength));
+
+        this.hitboxLeft = (x) - (this.hitboxLength / 2);
+        // this.hitboxLeft = (this.x);
+        this.hitboxRight = (x + this.hitboxLength);
+
+        this.hitbox = {
+            'length': this.hitboxLength,
+            'y': this.hitboxTop,
+            'yLength': y + this.hitboxBottom,
+            'x': this.hitboxLeft,
+            'xLength': x + this.hitboxRight
+        }
+    }

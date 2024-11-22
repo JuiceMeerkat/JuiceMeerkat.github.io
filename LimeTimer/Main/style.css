@@ -1,0 +1,520 @@
+:root {
+  --pageBorderWidth: 10px;
+  --scrollBarWidth: 10px;
+}
+
+
+
+
+@keyframes rotateLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes expandShrink {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 20%;
+  }
+}
+
+
+
+
+
+/* Reset margins and paddings for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: calc(100vw - (var(--scrollBarWidth)));
+  height: 120px;
+  background-color: hsl(221, 96%, 68%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 68px;
+}
+
+/* Ensure #mainPage covers at least the viewport height and centers its content */
+#mainPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: auto;
+  min-height: 100%;
+  min-height: 100vh;
+  
+}
+
+
+
+
+/* Body styling for larger height and gradient background */
+body {
+  margin: var(--pageBorderWidth);
+  margin-top: 0;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(255, 205, 67)
+  
+}
+
+
+.border {
+  position: fixed;
+  pointer-events: none; /* Allows clicking through the border */
+  box-sizing: border-box; /* Not needed for the border effect */
+  z-index: 999;
+  
+}
+
+#topBorder {
+  position: fixed;
+  top: 0;
+  left: var(--pageBorderWidth);
+  width: calc(100vw - (var(--pageBorderWidth) * 2));
+  height: var(--pageBorderWidth);
+  background-image: linear-gradient(to right, purple, blue);
+}
+
+
+
+#leftBorder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--pageBorderWidth);
+  height: 100vh;
+  background-image: linear-gradient(to bottom, purple, blue);
+}
+
+
+
+
+#bottomBorder {
+  position: fixed;
+  bottom: 0;
+  left: var(--pageBorderWidth);
+  width: calc(100vw - (var(--pageBorderWidth) * 2));
+  height: var(--pageBorderWidth);
+  background-image: linear-gradient(to left, purple, blue);
+}
+
+
+
+#rightBorder {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--pageBorderWidth);
+  height: 100vh;
+  background-image: linear-gradient(to top, purple, blue);
+  }
+
+.torsHeading {
+  font-size: 70px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 10px;
+  position: sticky;
+  top: 30px;
+  z-index: 9;
+  margin-left: 30px;
+  
+}
+
+.torsHeading .is-pinned {
+  color: red;
+}
+
+
+
+
+#timersAndStopwatches {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+#stopwatches {
+  max-width: 48vw;
+  position: relative;
+  left: 0;
+
+}
+
+#timers {
+  max-width: 48vw;
+}
+
+
+
+
+
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin: 30px;
+  background-image: linear-gradient(to bottom, pink, yellow);
+  min-height: 100px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.timer {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin: 30px;
+  background-image: linear-gradient(to bottom, green, rgb(0, 255, 136));
+  min-height: 100px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.displayDiv {
+  padding: 0;
+  padding-bottom: 20px;
+  width: 90%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: visible;
+}
+
+.displayDiv #display {
+  font-size: 700%;
+  padding: 0;
+  background-image: linear-gradient(to top, rgb(140, 217, 248), rgb(255, 255, 255));
+  text-align: center;
+  width: 100%;
+  max-height: 100%;
+  opacity: 100%;
+  border: none;
+  border-radius: 10px;
+  margin: 0;             /* Removes any default shadow or glow effects */
+  -webkit-appearance: none;       /* Removes default appearance for WebKit-based browsers */
+  -moz-appearance: none;          /* Removes default appearance for Firefox */
+  appearance: none;    
+  position: relative;
+}
+
+.displayDiv #display:focus {
+  text-align: center;
+  outline: none;
+  caret-color: transparent;
+}
+
+
+.displayDiv #display:hover {
+  color: white;
+}
+
+
+
+#displayUnderline {
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0, 8, 255, 0.631);
+
+  animation-name: expandShrink;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.75s; 
+  animation-iteration-count: infinite;
+  
+  overflow: visible;
+  
+}
+/*
+
+#displayUnderline {
+}
+
+*/
+
+
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+  
+}
+
+.startButton {
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  margin: 20px;
+
+}
+
+.startButton svg {
+  transform: translateX(5px);
+}
+
+.resetButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  margin: 20px;
+}
+
+.resetButton svg {
+  height: 80%;
+}
+
+
+
+/*
+
+#dottedBackground {
+  background-image: url("/Images/BlackDotBlueBackground.png") ;
+  background-size: 50px 50px;
+  background-repeat: repeat;
+
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+
+  clip-path: circle(100px at 100px 0px), circle(49px at 280px 100px), circle(150px at 370px 97px);
+  clip-path: circle(150px at 370px 97px);
+  clip-path: circle(49px at 280px 100px);
+
+
+
+  animation-name: moving;
+  animation-timing-function: linear;
+  animation-duration: 100s; 
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+
+
+
+
+  
+}
+
+#dottedBackground::before {
+
+}
+
+*/
+
+
+#gradientBackground {
+  background-image: linear-gradient(to right, blue, red, pink, yellow, green, purple, blue);
+  background-size: 600%;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  z-index: 99999999999999;
+  animation-name: moving;
+  animation-timing-function: linear;
+  animation-duration: 10s; 
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+}
+
+@keyframes backgroundMovingDown {
+  0%{
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 400% ;
+  }
+}
+
+
+
+@keyframes moveUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-400px);
+  }
+}
+
+
+@keyframes moveRight{
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateY(200px);
+  }
+
+
+}
+
+/* 
+  background-image: linear-gradient(to right, blue, red, pink, yellow, green, purple);
+  background-size: 600%;
+  min-width: 100vw;
+  min-height: 100px;
+  position: relative;
+  z-index: 99999999999999;
+
+*/
+
+
+.backgroundCircle {
+  background-image: url("../Images/BlackDotBlueBackground.png");
+  background-size: 50px 50px;
+  background-repeat: repeat;
+  z-index: -99999999;
+  position: fixed;
+}
+
+
+#dottedCircleOne {
+  clip-path: circle(100px at 100px 100px); 
+  top: 50%;
+  left: 15%;
+  height: 200px;
+  width: 200px;
+
+  animation-name: backgroundMovingDown, moveUp;
+  animation-timing-function: linear, ease-in-out;
+  animation-duration: 23s, 20s; 
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, normal;
+  animation-fill-mode: forwards, both;
+}
+
+#dottedCircleTwo {
+  clip-path: circle(200px at 200px 200px); 
+  top: 50%;
+  left: 40%;
+  height: 400px;
+  width: 400px;
+
+  animation-name: backgroundMovingDown, moveUp;
+  animation-timing-function: linear, ease-in-out;
+  animation-duration: 17s, 15s; 
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, normal;
+  animation-fill-mode: both, both;
+}
+
+#dottedCircleThree {
+  clip-path: circle(170px at 170px 170px);
+  top: 200px;
+  left: 80%;
+  height: 340px;
+  width: 340px;
+
+  animation-name: backgroundMovingDown, moveUp;
+  animation-timing-function: linear, ease-in-out;
+  animation-duration: 13s, 25s; 
+  animation-iteration-count: infinite, infinite;
+  animation-direction: normal, normal;
+  animation-fill-mode: both, both;
+}
+
+
+
+
+
+#addButtonSection {
+  margin: 10px;
+}
+
+
+#addButton {
+  min-height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+
+}
+#plusShape {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  z-index: 99;
+  background-size: 200% 200%;
+  clip-path: polygon(
+    42.5% 0%, 57.5% 0%, 57.5% 42.5%, 100% 42.5%, 100% 57.5%, 57.5% 57.5%, 
+    57.5% 100%, 42.5% 100%, 42.5% 57.5%, 0% 57.5%, 0% 42.5%, 42.5% 42.5%
+);
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  
+}
+
+#plusShape::before {
+  content: '';
+  background-image: linear-gradient(to right, yellow, pink);
+
+  position: absolute;
+  border-radius: 50%;
+
+  
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+
+  animation-name: rotateLeft;
+  animation-timing-function: linear;
+  animation-duration: 5s; 
+  animation-iteration-count: infinite;
+}

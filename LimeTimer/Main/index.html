@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Online stopwatch</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/supabase.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Online stopwatch</h1>
+    </header>
+    <main class="main" id="mainPage">
+      
+
+      <section class="subSection" id="addButtonSection">
+        <div class="button" id="addButton">
+          <div id="plusShape"></div>
+        </div>
+      </section>
+
+
+      <section class="subSection" id="timersAndStopwatches">
+
+
+        <section class="multipleDisplays" id="stopwatchesOuter">
+          <div class="torsHeading" id="stopwatchHeading">
+            <h1>Stopwatches.</h1>
+          </div>
+
+          <div class="actualTORS" id="stopwatches">
+
+            <div class="stopwatch" id="firstStopwatch">
+
+              <div class="displayDiv" >
+                <input class="div" id="display" inputmode="numeric" placeholder="00:00:00:00" value=""></input>
+                <div id="displayUnderline"></div>
+              </div>
+
+              <div class="div" id="buttons">
+              
+                <button class="startButton" src="#">
+                <svg id="playButtonSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16.53 11.152-8-5A1 1 0 0 0 7 7v10a1 1 0 0 0 1.53.848l8-5a1 1 0 0 0 0-1.7zM9 15.2V8.805L14.113 12z" style="fill:#1c1b1e"/>
+                </svg> 
+                </button>
+
+
+                
+              <button class="resetButton" src="#">
+                  
+
+                <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 214.367 214.367" xml:space="preserve">
+                <path d="M202.403,95.22c0,46.312-33.237,85.002-77.109,93.484v25.663l-69.76-40l69.76-40v23.494  c27.176-7.87,47.109-32.964,47.109-62.642c0-35.962-29.258-65.22-65.22-65.22s-65.22,29.258-65.22,65.22  c0,9.686,2.068,19.001,6.148,27.688l-27.154,12.754c-5.968-12.707-8.994-26.313-8.994-40.441C11.964,42.716,54.68,0,107.184,0  S202.403,42.716,202.403,95.22z"/>
+                </svg>
+              </button>
+
+
+                
+              </div>
+
+            
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="multipleDisplays" id="timers">
+          <div class="torsHeading" id="timerHeading">
+            <h1>Timers.</h1>
+          </div>
+
+
+          <div class="timer">
+
+            <div class="displayDiv">
+              <input class="div" id="display" inputmode="numeric" placeholder="00:00:00:00" value=""></input>
+              <div id="displayUnderline"></div>
+            </div>
+
+            <div class="div" id="buttons">
+            
+              <button class="startButton" src="#">
+              <svg id="playButtonSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16.53 11.152-8-5A1 1 0 0 0 7 7v10a1 1 0 0 0 1.53.848l8-5a1 1 0 0 0 0-1.7zM9 15.2V8.805L14.113 12z" style="fill:#1c1b1e"/>
+              </svg> 
+              </button>
+
+
+              
+            <button class="resetButton" src="#">
+                
+
+              <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 214.367 214.367" xml:space="preserve">
+              <path d="M202.403,95.22c0,46.312-33.237,85.002-77.109,93.484v25.663l-69.76-40l69.76-40v23.494  c27.176-7.87,47.109-32.964,47.109-62.642c0-35.962-29.258-65.22-65.22-65.22s-65.22,29.258-65.22,65.22  c0,9.686,2.068,19.001,6.148,27.688l-27.154,12.754c-5.968-12.707-8.994-26.313-8.994-40.441C11.964,42.716,54.68,0,107.184,0  S202.403,42.716,202.403,95.22z"/>
+              </svg>
+            </button>
+
+
+              
+            </div>
+
+          
+          </div>
+
+        </section>
+      </section>
+    </main>
+
+
+    <div class="background" id="dottedBackground"></div>
+
+    <div class="backgroundCircle" id="dottedCircleOne"></div>
+    <div class="backgroundCircle" id="dottedCircleTwo"></div>
+    <div class="backgroundCircle" id="dottedCircleThree"></div>
+
+    
+    <div class="border" id="topBorder"></div>
+    <div class="border" id="leftBorder"></div>
+    <div class="border" id="bottomBorder"></div>
+    <div class="border" id="rightBorder"></div>
+    
+  </body>
+
+  <script src="1script.js"></script>
+</html>
+
+
+
+<!--xmlns="http://www.w3.org/2000/svg"--> 
+<!--<svg xmlns="http://www.w3.org/2000/svg"> <path d="M14.554,0C6.561,0,0,6.562,0,14.552c0,7.996,6.561,14.555,14.554,14.555c7.996,0,14.553-6.559,14.553-14.555     C29.106,6.562,22.55,0,14.554,0z"/> </svg>-->

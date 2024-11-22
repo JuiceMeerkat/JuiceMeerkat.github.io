@@ -1,0 +1,157 @@
+
+
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	height: 300vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.header {
+	display: flex;
+	z-index: 999;
+	justify-content: space-between;
+	/* Adjusted to separate items */
+	align-items: center;
+	/* Center items vertically */
+	background-color: purple;
+	height: 85px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+
+}
+
+.header img {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.header h1 {
+	font-size: 45px;
+	margin: 0px;
+	padding: 0px;
+	border: 10px;
+}
+
+
+.logopic {
+	display: flex;
+	align-items: center;
+	/* Align items vertically */
+	margin-left: 10px;
+
+}
+
+
+
+.login {
+	margin-right: 20px;
+}
+
+.main {
+	margin: 0px;
+	margin-bottom: auto;
+}
+
+
+#mainPageMain {
+	background-image: linear-gradient(rgb(59, 192, 216), rgb(255, 119, 57));
+	display: flex;
+	flex-direction: column;
+	margin-top: 85px;
+	margin-bottom: auto;
+	height: 100%;
+}
+
+
+.button {
+	background-color: yellow;
+	font-size: 20px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	width: auto;
+	height: auto;
+
+	transition-duration: 0.3s;
+
+	
+}
+
+.button a {
+	height: auto;
+	width: auto;
+}
+
+
+.button:hover {
+	background-color: lightcyan;
+	transform: translateY(-10px)
+	
+}
+
+
+
+
+
+.button #regFortButton {
+	width: 180px;
+	height: 42px;
+}
+
+#loginButton {
+	background-color: magenta;
+	font-size: 21px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	width: auto;
+	height: auto;
+	
+
+	transform-origin: center;
+	transition-duration: 0.2s;
+}
+
+#loginButton:hover {
+	background-color: darkorange;
+	padding: 10px;
+	font-size: 23px;
+	transform: translateY(0px)
+	
+}
+
+
+.fortifyText {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+.headingOne {
+	font-size: 55px;
+}
+
+.paragraph {
+	font-size: 25px;
+}

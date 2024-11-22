@@ -1,0 +1,2 @@
+databaseRef = document.getElementById('databaseStats');
+

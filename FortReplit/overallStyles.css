@@ -1,0 +1,392 @@
+@keyframes slideRight {
+	from {transform: translateX(-500px)}
+	to {transform: translateX(0px)}
+}
+
+@keyframes bounceAndWiggle {
+	0%, 100% {
+		transform: translateY(0)
+	}
+	25% {
+		transform: translateY(-15px)
+	} 
+	35%, 65% {
+		transform: rotate(5deg)
+	} 
+	60%, 90% {
+		transform: rotate(-5deg)
+	}
+}
+
+
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	height: 300vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.header {
+	display: flex;
+	z-index: 999;
+	justify-content: space-between;
+	/* Adjusted to separate items */
+	align-items: center;
+	/* Center items vertically */
+	background-color: purple;
+	height: 85px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+
+}
+
+.header img {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.header h1 {
+	font-size: 45px;
+	margin: 0px;
+	padding: 0px;
+	border: 10px;
+}
+
+
+.logopic {
+	display: flex;
+	align-items: center;
+	/* Align items vertically */
+	margin-left: 10px;
+
+}
+
+/*
+.logopic {
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	margin-left: 10px;
+	padding: 0px;
+	border: 0px;
+}
+
+	*/
+
+.login {
+	margin-right: 20px;
+}
+
+.main {
+	margin: 0px;
+	margin-bottom: auto;
+}
+
+#mainPageMain {
+	background-image: linear-gradient(rgb(59, 192, 216), rgb(255, 119, 57));
+	display: flex;
+	flex-direction: column;
+	margin-top: 85px;
+	margin-bottom: auto;
+	height: 100%;
+}
+
+
+.button {
+	background-color: yellow;
+	font-size: 20px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	width: auto;
+	height: auto;
+
+	transition-duration: 0.3s;
+
+	
+}
+
+.button a {
+	height: auto;
+	width: auto;
+}
+
+
+.button:hover {
+	background-color: lightcyan;
+	transform: translateY(-10px)
+	
+}
+
+.button #regFortButton {
+	width: 180px;
+	height: 42px;
+}
+
+#loginButton {
+	background-color: magenta;
+	font-size: 21px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	width: auto;
+	height: auto;
+	
+
+	transform-origin: center;
+	transition-duration: 0.2s;
+}
+
+#loginButton:hover {
+	background-color: darkorange;
+	padding: 10px;
+	font-size: 23px;
+	transform: translateY(0px)
+	
+}
+
+
+.fortifyText {
+	text-decoration: none;
+	color: black;
+}
+
+
+/*
+
+.loginImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 0;
+}
+
+*/
+
+.loginBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 40px;
+	width: 320px;
+	height: 250px;
+	z-index: 2;
+	backdrop-filter: blur(30px);
+	background-color: rgba(0, 128, 128, 0.25);
+	border-radius: 10px;
+	border: 0px solid black;
+	margin-top: 150px;
+}
+
+
+
+#loginMainPage {
+	display: flex;
+	margin-top: 85px;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.loginBox .loginBoxForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.loginBox h1 {
+	margin: 10px;
+}
+
+.loginBox .loginBoxForm #username {
+	width: 280px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	margin: 10px;
+	font-family: monospace;
+	font-size: 25px;
+	color: darkcyan;
+	padding: 10px;
+}
+
+.loginBox .loginBoxForm #password {
+	width: 280px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	margin: 10px;
+	font-family: monospace;
+	font-size: 25px;
+	color: darkcyan;
+	padding: 10px
+}
+
+
+
+#welcomeMain {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+#welcomeHeading {
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	animation-name: slideRight;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+#welcomeTextButton {
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
+}
+
+#registerParagraph  {
+	animation-name: slideRight;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+
+.submitButton {
+	background-color: #55AE87;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+}
+
+.submitButton:hover {
+	background-color: #98AC5C
+}
+
+.headingOne {
+	font-size: 55px;
+}
+
+.paragraph {
+	font-size: 25px;
+}
+
+
+
+
+
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+	background-image: linear-gradient(rgb(255, 119, 57), grey);
+	margin-top: auto;
+}
+
+
+footer #footerLinks {
+	display: flex;
+	flex-direction: row;
+	margin: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+footer #footerLinks hr {
+	margin: 10px;
+}
+
+footer .link {
+	margin: 10px;
+	color: red;
+}
+
+hr {
+	width: calc(100vw - 70px);
+}
+
+
+/* Not really used anymore:
+
+#marioKartVideo {
+	width: 100vw;
+	position: fixed;
+}
+
+*/
+
+.section {
+	margin: 15px;
+}
+
+
+#dragDropButton {
+	animation-name: hashbounceAndWiggle;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+#backToTopButton {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 10px;
+	background-color: rgb(0, 193, 187);
+	outline: none;
+	border: none;
+	z-index: 999;
+}
+
+#backToTopButton::before {
+	content:'';
+	width: 47px;
+	height: 47px;
+	position: absolute;
+	z-index: -1;
+	top: -5px; /* Adjust for the desired border thickness */
+	left: -5px; /* Adjust for the desired border thickness */
+	right: -5px; /* Adjust for the desired border thickness */
+	bottom: -5px; /* Adjust for the desired border thickness */
+	background-image: linear-gradient(to bottom right, magenta, blue);
+	border-radius: 10px;
+	display: block;
+}
+

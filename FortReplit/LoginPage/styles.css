@@ -1,0 +1,259 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.header {
+	display: flex;
+	z-index: 999;
+	justify-content: space-between;
+	/* Adjusted to separate items */
+	align-items: center;
+	/* Center items vertically */
+	background-color: purple;
+	height: 85px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+
+}
+
+.header img {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.header h1 {
+	font-size: 45px;
+	margin: 0px;
+	padding: 0px;
+	border: 10px;
+}
+
+
+.logopic {
+	display: flex;
+	align-items: center;
+	/* Align items vertically */
+	margin-left: 10px;
+
+}
+
+
+
+.login {
+	margin-right: 20px;
+}
+
+.main {
+	margin: 0px;
+	margin-bottom: auto;
+}
+
+
+
+#mainPageMain {
+	background-image: linear-gradient(rgb(59, 192, 216), rgb(255, 119, 57));
+	display: flex;
+	flex-direction: column;
+	margin-top: 85px;
+	margin-bottom: auto;
+	height: 100%;
+}
+
+
+.button {
+	background-color: yellow;
+	font-size: 20px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	width: auto;
+	height: auto;
+
+	transition-duration: 0.3s;
+
+	
+}
+
+.button a {
+	height: auto;
+	width: auto;
+}
+
+
+.button:hover {
+	background-color: lightcyan;
+	transform: translateY(-10px)
+	
+}
+
+
+
+
+.button #regFortButton {
+	width: 180px;
+	height: 42px;
+}
+
+#loginButton {
+	background-color: magenta;
+	font-size: 21px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	width: auto;
+	height: auto;
+	
+
+	transform-origin: center;
+	transition-duration: 0.2s;
+}
+
+#loginButton:hover {
+	background-color: darkorange;
+	padding: 10px;
+	font-size: 23px;
+	transform: translateY(0px)
+	
+}
+
+
+.fortifyText {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+.loginBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 40px;
+	width: 320px;
+	height: 250px;
+	z-index: 2;
+	backdrop-filter: blur(30px);
+	background-color: rgba(0, 128, 128, 0.25);
+	border-radius: 10px;
+	border: 0px solid black;
+	margin-top: 150px;
+}
+
+
+
+#loginMainPage {
+	display: flex;
+	margin-top: 85px;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.loginBox .loginBoxForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.loginBox h1 {
+	margin: 10px;
+}
+
+.loginBox .loginBoxForm #username {
+	width: 280px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	margin: 10px;
+	font-family: monospace;
+	font-size: 25px;
+	color: darkcyan;
+	padding: 10px;
+}
+
+.loginBox .loginBoxForm #password {
+	width: 280px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	margin: 10px;
+	font-family: monospace;
+	font-size: 25px;
+	color: darkcyan;
+	padding: 10px
+}
+
+
+
+
+
+.submitButton {
+	background-color: #55AE87;
+	width: 100px;
+	height: 50px;
+	font-size: 25px;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+}
+
+.submitButton:hover {
+	background-color: #98AC5C
+}
+
+
+.headingOne {
+	font-size: 55px;
+}
+
+.paragraph {
+	font-size: 25px;
+}
+
+#loginSection {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(212, 129, 129);
+	border-radius: 10px;
+	padding-bottom: 30px;
+	padding: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+#loginSection h1 {
+	font-size: 54px;
+	color: yellowgreen;
+
+}
+
+.main {
+	background-color: #bbfadf;
+	height: calc(100vh - 85px);
+}

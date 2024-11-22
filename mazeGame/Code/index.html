@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Maze Game</title>
+</head>
+<body>
+    <header>Header</header>
+
+    <main>
+
+        <!-- <section id="usernamePopUp" class="hide">
+            <h1 id="usernamePopUpHeading">What should we call you</h1>
+        </section> -->
+        
+        <section id="chooseUsername">
+            <input type="text" placeholder="your username" id="usernameBox">
+        </section>
+
+        <section id="changeId">
+            <!-- <input 
+            type="text" 
+            placeholder="your id" 
+            id="newIdBox" 
+            > -->
+
+            <form>
+                <input 
+                type="text" 
+                id="field"
+                placeholder="old name">
+
+                <input 
+                type="text" 
+                id="fieldAnswer" 
+                placeholder="new name">
+
+                <input type="submit" value="Submit" id="submitButton" >
+              </form>
+        </section>
+
+        <section id="chat">
+            <div id="chatHeadingBox">
+                <h1 id="chatHeading">Chat</h1>
+            </div>
+
+            <div id="messagesBox">
+
+                <div id="messagesBoxMessages">
+
+                </div>
+                
+
+            </div>
+
+            <div id="chatBox">
+                <input type="text" placeholder="massage" id="chatter">
+            </div>
+        </section>
+
+
+
+        <section id="statsDisplayControls">
+            <section id="statsAndDisplay">
+                <section id="leftStats">
+                    <h1 id="fpsDisplay">FPS: ...</h1>
+                </section>
+
+                <section id="displaySection">
+                    <canvas id="board"></canvas>
+                </section>
+                
+                <section id="rightStats">
+                    <div id="coordsDisplay">
+                        <div id="xCoords" class="playerCoordDisplay">
+                            <h1 id="xReference1" class="coRef1s">X: </h1> <h3 id="xReference2" class="coRef2s">(..)</h3>
+                        </div>
+                        <div id="yCoords" class="playerCoordDisplay">
+                            <h1 id="yReference1" class="coRef1s">Y: </h1> <h3 id="yReference2" class="coRef2s">(..)</h3> 
+                        </div>
+                    </div>
+                    <div id="hitboxDisplay">
+                        <h1 id="hitboxX">Hitbox X : ...</h1>
+                        <h1 id="hitboxY">Hitbox Y : ...</h1>
+                        <h1 id="hitboxLength">Hitbox length : ...</h1>
+                    </div>
+                </section>
+            </section>
+            <section id="controlsDescription">
+                <h3>Controls:</h3>
+                <ul>
+                    <li>Map on/off with P</li>
+                    <li>3D View on/off with O</li>
+                </ul>
+            </section>
+        </section>
+
+
+        <section>
+            <a href="databasePage/databasePage.html">
+                <button>
+                    Visit the database
+                </button>
+            </a>
+        </section>
+    </main>
+
+    
+    <!-- <script src="gameLogicScript.js"></script> -->
+    <script type="module" src="initJS.js"></script>
+    <script src="random.js"></script>
+    <script type="module" src="username.js"></script>
+    <script type="module" src="message.js"></script>
+</body>
+</html>
