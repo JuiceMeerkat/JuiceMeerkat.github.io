@@ -73,6 +73,19 @@ export const listenToChanges = (tableName, callback) => {
     .subscribe();
 };
 
+export const onDatabaseChange = (payload) =>  {
+  console.log('------------------------------------');
+  console.log('************************************');
+
+
+  console.log('Change received in table :');
+  console.log(payload);
+
+  console.log('************************************');
+  console.log('------------------------------------');
+
+}
+
 
 // .eq basically is WHERE in sql, so it takes a field and a 'answer' to that field a record, so that singles out the record
 // then the .update (which strangely comes before the .eq even though that doesn't make intuitive sense) updates the value from a specificed column/field (first param) and changes it to the second param
@@ -117,7 +130,7 @@ export const insertToTable = async (tableName, insertRow) => {
 
 
 // Callback to handle changes in the 'messages' table
-const handleMessagesChange = (payload) => {
+export const handleMessagesChange = (payload) => {
   console.log('Change received in messages table:', payload);
   if (allowAlerts) {
     window.alert('Change received in messages table:', payload);

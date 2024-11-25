@@ -1,14 +1,17 @@
-import { listenToChanges, logTableData, updateTable, insertToTable, handleMessagesChange } from './Supabase/supabase.js';
+import { listenToChanges, onDatabaseChange, logTableData, updateTable, insertToTable, handleMessagesChange } from './Supabase/supabase.js';
 
 let allowAlerts = false;
 
 window.listenToChanges = listenToChanges;
+window.onDatabaseChange = onDatabaseChange;
 window.logTableData = logTableData;
 window.updateTable = updateTable;
 window.insertToTable = insertToTable;
 
 let theScript = 'initJS.js';
 console.log('theScript : ', theScript);
+console.log('jjjjjjjjjjjjkkkkkkkkkkkkkkkk')
+
 
 
 
